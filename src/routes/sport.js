@@ -5,6 +5,7 @@ module.exports = function(app) {
         try {
             return res.json(await Sport.getAllSportsToursAndMatches());
         } catch (err) {
+            console.log(err)
             return next(err);
         }
     });
